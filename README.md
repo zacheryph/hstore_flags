@@ -1,3 +1,8 @@
+# ABANDON NOTICE
+
+This gem is no longer maintained. Rails Core supports HStore and JSON fields directly.
+You should no longer need this Gem if you are using a newer version of Rails.
+
 # HStore Flags
 
 [![Gem Version](https://img.shields.io/gem/v/hstore_flags.svg)](https://rubygems.org/gems/hstore_flags)
