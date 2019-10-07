@@ -8,14 +8,14 @@ module HStoreFlags
   private
 
   def set_hstore_flag_field(field, flag, value)
-    new_val = TRUE_VALUES.include?(value)
     old_val = send(flag)
-    return if new_val == old_val
+    new_val = TRUE_VALUES.include?(value)
+    return if old_val == new_val
 
-    send("#{field}_will_change!")
-    if defined? changed_attributes
-      send(:changed_attributes).merge!(flag.to_s => old_val)
+    if respond_to?(:changed_attributes)
+      @changed_attributes = changed_attributes.merge(flag.to_s => old_val)
     end
+
     fields = self[field] || {}
 
     if new_val

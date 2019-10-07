@@ -1,22 +1,24 @@
-HStore Flags
-------------
+# HStore Flags
+
+[![Gem Version](https://img.shields.io/gem/v/hstore_flags.svg)](https://rubygems.org/gems/hstore_flags)
+[![License](https://img.shields.io/badge/license-mit-blue.svg)](https://raw.githubusercontent.com/zacheryph/hstore_flags/master/LICENSE)
+[![Build Status](https://travis-ci.org/zacheryph/hstore_flags.svg?branch=master)](https://travis-ci.org/zacheryph/hstore_flags)
+[![Code Climate](https://codeclimate.com/github/zacheryph/hstore_flags/badges/gpa.svg)](https://codeclimate.com/github/zacheryph/hstore_flags)
+[![Test Coverage](https://codeclimate.com/github/zacheryph/hstore_flags/badges/coverage.svg)](https://codeclimate.com/github/zacheryph/hstore_flags/coverage)
 
 integer/bit flags aggrevating you? try this.
 
-Requirements
-------------
+## Requirements
 
 * Rails 4.0 or greater
 * Postgresql 8.4+ with contrib package
 * Read [activerecord-postgres-hstore](https://raw.github.com/engageis/activerecord-postgres-hstore) for index creation
 
-Installation
-------------
+## Installation
 
-TODO
+_TODO_
 
-Usage
------
+## Usage
 
 ```ruby
 # Add hstore flags column to your table in a migration
@@ -46,3 +48,11 @@ User.not_drop_ship.to_sql #=> SELECT * FROM users WHERE (defined(user_type, 'dro
 
 * `field` option defaults to `flags`
 * `scopes: false` disables scope creation. though im not sure how useful that is
+
+## Contributors
+
+* [Zachery Hostens](https://github.com/zacheryph)
+* [Ryan Sonnek](https://github.com/wireframe)
+* [Joe Acklin](https://github.com/jacklin10)
+* [Andreas Happe](https://github.com/andreashappe)
+* [Sven Schwyn](https://github.com/svoop)
